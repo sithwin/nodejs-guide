@@ -24,8 +24,8 @@ const server = http.createServer((req, res) => {
     });
 
     return req.on("end", () => {
-      const parseBody = Buffer.concat(body).toString();
-      const message = parseBody.split("=")[1];
+      const parsedBody = Buffer.concat(body).toString();
+      const message = parsedBody.split("=")[1];
       fs.writeFileSync("message.txt", message, (err) => {
         res.statusCode = 302;
         res.setHeader("Location", "/");
