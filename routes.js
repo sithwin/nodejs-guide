@@ -7,7 +7,7 @@ const requestHandler = (req, res) => {
   if (url === "/") {
     res.setHeader("Content-Type", "text/html");
     res.write("<html>");
-    res.write("<head><title>My First Page</title><head>");
+    res.write("<head><title>My First Pages</title><head>");
     res.write(
       '<body><form action="/message" method="POST"><input type="text" name="message"><button type="submit">Send</button></form></body>'
     );
@@ -36,7 +36,7 @@ const requestHandler = (req, res) => {
   res.setHeader("Content-Type", "text/html");
   res.write("<html>");
   res.write("<head><title>My First Page</title><head>");
-  res.write("<body>Hello from my NodeJs Server</body>");
+  res.write("<body>Hello from my NodeJs Serve!!!DD</body>");
   res.write("</html>");
   res.end();
 };
